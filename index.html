@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pak Weel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body style="background-color: #e1e2e2;">
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content pb-4 ps-2">
+      <div class="modal-header pb-0 border-0">
+        <h1 class="fs-5">  
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="py-2">
+          We’re so happy you’re here! 🤩 Enter your phone number to continue
+        </h3>
+            <input class="fs-4" type="tel" name="" id="" placeholder="Enter your number" value="">
+            <button class="bg-primary fs-4">
+              <i class="fa-solid fa-greater-than"></i>
+            </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header my-0 py-0 border-0">
+          <h1 class="modal-title fs-3" id="staticBackdropLabel">Car Detail</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body px-5">
+            <form onsubmit="event.preventDefault();">
+                <div class="mb-1">
+                  <label for="firstName" class="form-label text-center fw-medium fs-4">Upload Car Picture</label>
+                  <input type="file" class="form-control border-secondary"  id="carImage">
+                </div>
+                <div class="mb-1">
+                    <label for="firstName" class="form-label  fw-medium fs-4">Car Info *</label>
+                  <input type="text" class="form-control border-secondary " id="car-Info">
+                </div>
+                <div class="mb-1 " >
+                  <label for="lastName" class="form-label fw-medium  fs-4">Province</label>
+                  <select id="province-City" class="form-select border-secondary" aria-label="Default select example" >
+                      <option value="Punjab" selected>Punjab</option>
+                      <option value="Sindh">Sindh</option>
+                      <option value="KPK">KPK</option>
+                      <option value="Bolochistan">Bolochistan</option>
+                   </select>
+                </div>
+              <div class="mb-1 " >
+                <label for="lastName" class="form-label fw-medium  fs-4">City *</label>
+                <select id="car-City" class="form-select border-secondary" aria-label="Default select example" >
+                    <option value="Lahore" selected>Lahore</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Peshawar">Peshawar</option>
+                    <option value="Swat">Swat</option>
+                    <option value="Quetta">Quetta</option>
+                    <option value="Gwadar">Gwadar</option>
+                    <option value="Larkana">Larkana</option>
+                    <option value="Jamshoro">Jamshoro</option>
+                 </select>
+              </div>
+              <div class="mb-1">
+                <label for="lastName" class="form-label fw-medium  fs-4">City Area</label>
+                 <select id="cityArea" class="form-select border-secondary" aria-label="Default select example" >
+                    <option value="Johar Town" selected >Johar Town</option>
+                    <option value=" Raja Bazar"> Raja Bazar</option>
+                    <option value="Chaman">Chaman</option>
+                    <option value="Pishin">Pishin</option>
+                    <option value=" F9 Sector"> F9 Sector</option>
+                    <option value=" DHA Defence"> DHA Defence</option>
+                    <option value="Korangi">Korangi</option>
+                    <option value="Mingora">Mingora</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Sadar">Sadar</option>
+                    <option value="Malir">Malir</option>
+                    <option value="Gwadar">Sadar</option>
+                    <option value="Gulberg">Gulberg</option>
+                    <option value="Jamshoro">Jamshoro</option>
+                    <option value="Larkana">Larkana</option>
+                 </select>
+             </div>
+              <div class="mb-1">
+                <label for="lastName" class="form-label fw-medium fs-4">Model *</label>
+                <input type="number"  class="form-control border-secondary" id="car-Model">
+            </div>
+              <div class="mb-1">
+                  <label for="class" class="form-label fw-medium fs-4">Price *</label>
+                  <input type="text"  class="form-control border-secondary" id="car-Price">
+              </div>
+              <div class="mb-1">  
+                  <label for="class" class="form-label fw-medium fs-4">Mileage * (km)</label>
+                  <input type="number"  class="form-control border-secondary" id="car-Km">
+              </div>
+              <div class="mb-1">  
+                <label for="class" class="form-label fw-medium fs-4">Engine-Fuel</label>
+                <input type="text"  class="form-control border-secondary" id="car-Engine">
+              </div>
+              <div class="mb-1">  
+                <label for="class" class="form-label fw-medium fs-4">Power</label>
+                <input type="number" class="form-control border-secondary" id="car-Power">
+              </div>
+              <div class="mb-1">  
+                <label for="class" class="form-label fw-medium fs-4">Type *</label>
+                <input type="text" class="form-control border-secondary" id="car-type">
+              </div>
+              <input type="hidden"  name="" id="hiddenId">
+               <div class="d-flex">
+                <button id="submitbtn"  onclick="submitBtn()"  class="my-3 mx-1 py-1 text-white bg-black rounded-2"  data-bs-dismiss="modal"  aria-label="Close">
+                  Submit
+                </button>
+                <button onclick="updateBtn()" id="updatebtn"  class="my-3 py-1 text-white bg-black rounded-2"  data-bs-dismiss="modal"  aria-label="Close">
+                  Update
+                </button>
+               </div>
+            </form>  
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between pt-3">
+            <h3>Cars for sale in Lahore</h3>            
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="bg-white fs-5 fw-medium text-black rounded-1 p-2">
+                    Show Results By:
+                </div>
+                <div class="pt-4">
+                  <div class="accordion border-0" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button fw-medium fs-5 shadow-none text-black bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                          Search By Keyword
+                        </button>
+                      </h2>
+                    </div>
+                  </div>
+                  <div id="panelsStayOpen-collapse" class="accordion-collapse rounded-1  collapse show">
+                    <span class="bg-white rounded-1 py-2 d-flex "> 
+                      <input id="searchId" class="width"  type ="text" value=""/>
+                      <button class=" text-white bg-233D7B">Go</button>
+                    </span>
+                  </div>
+                    <div class="accordion border-0" id="accordionPanelsStayOpenExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button fs-5 fw-medium shadow-none text-black bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                              City
+                            </button>
+                          </h2>
+                        </div>
+                      </div>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse bg-white rounded-1  collapse show">
+                      <div class="accordion-body ms-2 p-2">
+                        <div>
+                          <input id="lahoreId" type="checkbox" name="city" value="Lahore" class="city-checkbox">
+                            <label for="Lahore" class="ps-2 text-black">Lahore</label> 
+                         </div>
+                         <div>
+                            <input id="islamabadId" type="checkbox" name="city" value="Islamabad" class="city-checkbox">
+                            <labeln for="Islamabad" class="ps-2 text-black">Islamabad</labeln> 
+                         </div>
+                        <div>
+                          <input id="KarachiId" type="checkbox" name="city" value="Karachi" class="city-checkbox">
+                          <labeln for="Karachi" class="ps-2 text-black">Karachi</labeln> 
+                        </div>
+                        <div>
+                          <input id="QuettaId" type="checkbox" name="city" value="Quetta" class="city-checkbox">
+                          <labeln for="Quetta" class="ps-2 text-black">Quetta</labeln> 
+                        </div>
+                        <div>
+                          <input id="SwatId" type="checkbox" name="city" value="Swat" class="city-checkbox">
+                          <labeln for="Swat" class="ps-2 text-black">Swat</labeln> 
+                        </div>
+                      </div>
+                      </div>
+                      <div class="accordion border-0" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <button class="accordion-button fw-medium fs-5 shadow-none text-black bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetwo" aria-expanded="true" aria-controls="panelsStayOpen-collapsetwo">
+                                City Area
+                            </button>
+                        </div>
+                      </div>
+                      <div id="panelsStayOpen-collapsetwo" class="accordion-collapse bg-white rounded-1 collapse show">
+                        <div class="accordion-body ms-2 p-2">
+                         <div>
+                            <div>
+                                <input id="townArea"  type="checkbox" name="city_area" value="Johar Town" class="area-checkbox">
+                                <span class="ps-2 text-black">Johar Town</span> 
+                            </div>
+                            <div>
+                                <input id="dhaArea"  type="checkbox" name="city_area" value="DHA Defence" class="area-checkbox">
+                                <span class="ps-2 text-black">DHA Defence</span> 
+                            </div>
+                            <div>
+                                <input id="bahriaArea"  type="checkbox" name="city_area" value="Bahria Town" class="area-checkbox">
+                                <span class="ps-2 text-black">Bahria Town</span> 
+                            </div>
+                            <div>
+                                <input id="gulArea"  type="checkbox" name="city_area" value="Gulberg" class="area-checkbox">
+                                <span class="ps-2 text-black">Gulberg</span> 
+                            </div>
+                            <div>
+                              <input id="rajaAra"  type="checkbox" name="city_area" value="Raja Bazar" class="area-checkbox">
+                              <span class="ps-2 text-black">Raja Bazar</span> 
+                          </div>
+                          <div>
+                            <input id="mingoraId"  type="checkbox" name="city_area" value="Mingora" class="area-checkbox">
+                            <span class="ps-2 text-black">Mingora</span> 
+                        </div>
+                          <div>
+                            <input id="KorangiId"  type="checkbox" name="city_area" value="Korangi" class="area-checkbox">
+                            <span class="ps-2 text-black">Korangi</span> 
+                          </div>
+                          <div>
+                            <input id="MalirId"  type="checkbox" name="city_area" value="Malir" class="area-checkbox">
+                            <span class="ps-2 text-black">Malir</span> 
+                          </div>
+                          <div>
+                            <input id="F9Sector"  type="checkbox" name="city_area" value="F9 Sector" class="area-checkbox">
+                            <span class="ps-2 text-black">F9 Sector</span> 
+                          </div>
+                         </div>
+                        </div>
+                    </div>
+                    <div class="accordion border-0" id="accordionPanelsStayOpenExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button fs-5 fw-medium shadow-none text-black bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsepro" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Province
+                            </button>
+                          </h2>
+                        </div>
+                      </div>
+                    <div id="panelsStayOpen-collapsepro" class="accordion-collapse bg-white rounded-1  collapse show">
+                      <div class="accordion-body ms-2 p-2">
+                        <div>
+                          <input id="Punjab" type="checkbox" name="province" value="Punjab" class="province-checkbox">
+                            <label for="Punjab" class="ps-2 text-black">Punjab</label> 
+                         </div>
+                         <div>
+                            <input id="islamabadId" type="checkbox" name="province" value="Sindh" class="province-checkbox">
+                            <labeln for="Islamabad" class="ps-2 text-black">Sindh</labeln> 
+                         </div>
+                         <div>
+                          <input id="KarachiId" type="checkbox" name="province" value="KPK" class="province-checkbox">
+                          <labeln for="Karachi" class="ps-2 text-black">KPK</labeln> 
+                         </div>
+                         <div>
+                          <input id="KarachiId" type="checkbox" name="province" value="Bolochistan" class="province-checkbox">
+                          <labeln for="Karachi" class="ps-2 text-black">Bolochistan</labeln> 
+                         </div>
+                        </div>
+                    </div>
+                    <div class="accordion border-0" id="accordionPanelsStayOpenExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button fs-5 fw-medium shadow-none text-black bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseYear" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Year
+                          </button>
+                        </h2>
+                      </div>
+                    </div>
+                    <div id="panelsStayOpen-collapseYear" class="accordion-collapse bg-white rounded-1  collapse show">
+                      <div class="accordion-body p-1">
+                        <span class="d-flex mt-2 justify-center items-center " id="search">
+                          <input class="border p-2  w-50" type="number" placeholder="From" id="yearFrom">
+                          <input class="border p-2 w-50" type="number" name="" id="yearTo" placeholder="To">
+                          <button class=" text-white bg-233D7B" onclick="yearRange()">Go</button>
+                        </span>
+                      </div>
+                    </div>
+  
+                    <div class="accordion border-0" id="accordionPanelsStayOpenExample">
+                      <div class="accordion-item">
+                          <button class="accordion-button fw-medium shadow-none fs-5 text-black bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetworadio" aria-expanded="true" aria-controls="panelsStayOpen-collapsetworadio">
+                            Transmission
+                          </button>
+                      </div>
+                    </div>
+                    <div id="panelsStayOpen-collapsetworadio" class="accordion-collapse bg-white rounded-1 collapse show">
+                      <div class="accordion-body ms-2 p-2">
+                       <div>
+                          <div>
+                              <input id="automatic" class="car-type"  type="checkbox" name="type" value="Automatic" class="area-checkbox">
+                              <span class="ps-2 text-black">Automatic</span> 
+                          </div>
+                          <div>
+                              <input id="manual" class="car-type" type="checkbox" name="type" value="Manual" class="area-checkbox">
+                              <span class="ps-2 text-black">Manual</span> 
+                          </div>
+                       </div>
+                      </div>
+                  </div>
+                  <div class="accordion border-0" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button fs-5 fw-medium shadow-none text-black bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsePrice" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                          Price
+                        </button>
+                      </h2>
+                    </div>
+                  </div>
+                  <div id="panelsStayOpen-collapsePrice" class="accordion-collapse bg-white rounded-1  collapse show">
+                    <div class="accordion-body p-1">
+                      <span class="d-flex mt-2 justify-center items-center " id="search">
+                        <input class="border p-2  w-50" type="number" placeholder="From" id="priceFrom">
+                        <input class="border p-2 w-50" type="number" name="" id="priceTo" placeholder="To">
+                        <button class=" text-white bg-233D7B" onclick="calculatePriceRange()">Go</button>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="accordion border-0" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <button class="accordion-button fw-medium shadow-none fs-5 text-black bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetwoEnginetype" aria-expanded="true" aria-controls="panelsStayOpen-collapsetwoEnginetype">
+                          Engine Type
+                        </button>
+                    </div>
+                  </div>
+                  <div id="panelsStayOpen-collapsetwoEnginetype" class="accordion-collapse bg-white rounded-1 collapse show">
+                    <div class="accordion-body ms-2 p-2">
+                     <div>
+                        <div>
+                            <input id="petrol" class="engine-type" type="checkbox" name="engineType" value="Petrol" class="area-checkbox">
+                            <span class="ps-2 text-black">Petrol</span> 
+                        </div>
+                        <div>
+                            <input id="diesel" class="engine-type"  type="checkbox" name="engineType" value="Diesel" class="area-checkbox">
+                            <span class="ps-2 text-black">Diesel</span> 
+                        </div>
+                        <div>
+                          <input id="electric" class="engine-type"  type="checkbox" name="engineType" value="Electric" class="area-checkbox">
+                          <span class="ps-2 text-black">Electric</span> 
+                      </div>
+                      <div>
+                        <input id="hybrid" class="engine-type"  type="checkbox" name="engineType" value="Hybrid" class="area-checkbox">
+                        <span class="ps-2 text-black">Hybrid</span> 
+                      </div>
+                     </div>
+                    </div>
+                </div>
+                <div class="accordion border-0" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button fs-5 fw-medium shadow-none text-black bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemile" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        Mileage (KM)
+                      </button>
+                    </h2>
+                  </div>
+                </div>
+                <div id="panelsStayOpen-collapsemile" class="accordion-collapse bg-white rounded-1  collapse show">
+                  <div class="accordion-body p-1">
+                    <span class="d-flex mt-2 justify-center items-center " id="search">
+                      <input class="border p-2  w-50" type="number" placeholder="From" id="mileageFrom">
+                      <input class="border p-2 w-50" type="number" name="" id="mileageTo" placeholder="To">
+                      <button class=" text-white bg-233D7B" onclick="calculateMileageRange()">Go</button>
+                      <!-- onclick="calculateMileageRange()" -->
+                   </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-9">
+                <div class="p-1 mx-1 d-flex align-items-center justify-content-between rounded-1 mb-4 bg-white">
+                  <div class="d-flex">
+                      <h6 class="px-2 text-black pt-2">Sort By:</h6>
+                    <select id="sort-Id">
+                      <option value=""></option>
+                      <option value="name-des">Title:A-Z</option>
+                      <option value="name-asd">Title:Z-A</option>
+                      <option value="price-high">Price:High to Low</option>
+                      <option value="price-low">Price:Low to High</option>
+                      <option value="model-latest">Model:Latest First</option>
+                      <option value="model-oldest">Model:Oldest First</option>
+                    </select>
+                  </div>
+                  <button type="button" onclick="showAdd()" class="btn btn-primary add-car" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Sell My Car
+                  </button>
+                </div>
+              <div id="list-card">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+<script>
+   
+  const yearFrom = document.getElementById("yearFrom");
+  const yearTo = document.getElementById("yearTo");
+  
+  const yearRange = () => {
+    const from = parseInt(yearFrom.value) || 0;
+    const to = parseInt(yearTo.value);
+
+    const filterData = cars.filter(
+      (car) => car.model >= from && car.model <= to
+    );
+    displayCar(filterData);
+    document.getElementById("yearFrom").value = "";
+    document.getElementById("yearTo").value = "";
+
+  };
+  yearFrom.addEventListener("input",);
+  yearTo.addEventListener("input",);
+
+
+
+</script>
+
+
+
+    <script src="function.js"></script>
+    <script src="data.js"></script>
+    <script src="sort and filter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </body>
+</html>
+<style>
+  .bg-3EB549{
+    background-color: #3EB549;
+  }
+  .width{
+    width: 90%;
+  }
+  .bg-233D7B{
+    background-color: #233D7B;
+    border-radius: 3px;
+  }
+</style>
